@@ -7,6 +7,8 @@ using Microsoft.Extensions.PlatformAbstractions;
 using TheWorld.Models;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
+using AutoMapper;
+using TheWorld.Controllers.Api;
 
 namespace TheWorld
 {
@@ -54,6 +56,12 @@ namespace TheWorld
         public void Configure(IApplicationBuilder app, WorldContextSeedData seeder)
         {
             //app.UseDefaultFiles(); -> index.html will be handled by MVC, so we remove this form here;
+
+            Mapper.Initialize(config =>
+            {
+                config.CreateMap<TripViewModel, Trip>().ReverseMap();
+            });
+
             app.UseStaticFiles();
 
             app.UseMvc(config =>

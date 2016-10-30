@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TheWorld.Models;
+using AutoMapper;
 
 namespace TheWorld.Controllers.Api
 {
+    [Route("api/trips")]
     public class TripController : Controller
     {
 
@@ -18,11 +20,32 @@ namespace TheWorld.Controllers.Api
            _repository = repository;
         }
 
-        [HttpGet("api/trips")]
+        [HttpGet("")]
         public IActionResult Get()
         {
-            //var results = _repository.GetAllTripsWithStops();
-            return Ok(_repository.GetAllTrips());
+            try
+            {
+                var results = _repository.GetAllTrips();
+
+                return Ok(Mapper.Map<IEnumerable<TripViewModel>>(results));
+            }
+            catch(Exception ex)
+            {
+                return HttpBadRequest("Bad request data");
+            }
+        }
+
+        [HttpPost("")]
+        public IActionResult Post([FromBody]TripViewModel theTrip)
+        {
+            if(ModelState.IsValid)
+            {
+                // Save data to the database
+                var newTrip = Mapper.Map<Trip>(theTrip);
+
+                return Created($"api/trips/{theTrip.Name}",Mapper.Map<TripViewModel>(newTrip));
+            }
+            return HttpBadRequest(ModelState);
         }
     }
 }

@@ -3,6 +3,15 @@
   "version": 2,
   "targets": {
     "DNX,Version=v4.5.1": {
+      "AutoMapper/5.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net45/AutoMapper.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -1683,6 +1692,15 @@
       }
     },
     "DNXCore,Version=v5.0": {
+      "AutoMapper/5.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wpa81/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/AutoMapper.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -3977,6 +3995,15 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x86": {
+      "AutoMapper/5.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net45/AutoMapper.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -5660,6 +5687,15 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x64": {
+      "AutoMapper/5.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net45/AutoMapper.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -7343,6 +7379,15 @@
       }
     },
     "DNXCore,Version=v5.0/win7-x86": {
+      "AutoMapper/5.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wpa81/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/AutoMapper.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -10137,6 +10182,15 @@
       }
     },
     "DNXCore,Version=v5.0/win7-x64": {
+      "AutoMapper/5.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wpa81/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/AutoMapper.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -12932,6 +12986,23 @@
     }
   },
   "libraries": {
+    "AutoMapper/5.1.1": {
+      "type": "package",
+      "sha512": "Q3uFSWccBUE1Q9BW88C6RO2Y/iFkPztTKK1ciyx1jhWPdOi5+pvzZ2EwcJKPiV0cr2EXZUWqQOsSpA5jVjfQBg==",
+      "files": [
+        "AutoMapper.5.1.1.nupkg",
+        "AutoMapper.5.1.1.nupkg.sha512",
+        "AutoMapper.nuspec",
+        "lib/net45/AutoMapper.dll",
+        "lib/net45/AutoMapper.xml",
+        "lib/netstandard1.1/AutoMapper.dll",
+        "lib/netstandard1.1/AutoMapper.xml",
+        "lib/netstandard1.3/AutoMapper.dll",
+        "lib/netstandard1.3/AutoMapper.xml",
+        "lib/portable-net45+win8+wpa81/AutoMapper.dll",
+        "lib/portable-net45+win8+wpa81/AutoMapper.xml"
+      ]
+    },
     "EntityFramework.Commands/7.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
@@ -18212,7 +18283,8 @@
       "Microsoft.AspNet.Mvc >= 6.0.0-rc1-final",
       "Microsoft.AspNet.Mvc.TagHelpers >= 6.0.0-rc1-final",
       "Microsoft.AspNet.Server.Kestrel >= 1.0.0-rc1-final",
-      "Microsoft.AspNet.StaticFiles >= 1.0.0-rc1-final"
+      "Microsoft.AspNet.StaticFiles >= 1.0.0-rc1-final",
+      "AutoMapper >= 5.1.1"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
